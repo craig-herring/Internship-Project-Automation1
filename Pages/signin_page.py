@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 
 from Pages.base_page import Page
 
-class LogInPage(Page):
+class SignInPage(Page):
     EMAIL_FIELD = (By.ID, 'email-2')
     PASSWORD_FIELD =(By.ID, 'field')
     CONTINUO_FIELD=(By.CSS_SELECTOR,"a[wized='loginButton']")
