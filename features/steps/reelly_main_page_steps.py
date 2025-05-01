@@ -36,5 +36,5 @@ def open_market(context):
     sleep(4)
 
 @Then ('Verify the right page opens')
-def check_market_page(context):
-    context.app.market_page.check_market_page()
+def check_pageloop_page(context):
+    context.app.pageloop_page.check_pageloop_page()

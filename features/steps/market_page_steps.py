@@ -19,4 +19,3 @@ def page_back(context):
     for _ in range(7):
         context.app.reelly_main_page.page_back()
         sleep(4)
-

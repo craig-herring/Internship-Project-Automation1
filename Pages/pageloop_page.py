@@ -11,7 +11,7 @@ class MarketPage(Page):
     DEV_TEXT = (By.XPATH, "//div[@class='tag-text-proparties']")
     LIC_BANNER = (By.XPATH, "//div[@class='license-block']")
 
-    def check_market_page(self):
+    def check_pageloop_page(self):
         self.find_element(*self.HDR_TEXT)
 
     def developer_filter(self):
