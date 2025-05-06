@@ -13,9 +13,9 @@ def browser_init(context, scenario_name):
     """
 
 
-    #driver_path = ChromeDriverManager().install()
-    #service = Service(driver_path)
-    #context.driver = webdriver.Chrome(service=service)
+    driver_path = ChromeDriverManager().install()
+    service = Service(driver_path)
+    context.driver = webdriver.Chrome(service=service)
 
 
     #driver_path = GeckoDriverManager().install()
@@ -36,18 +36,18 @@ def browser_init(context, scenario_name):
 
     ### BROWSERSTACK ###
     #Register for BrowserStack, then grab it from https://www.browserstack.com/accounts/settings
-    bs_user = 'craigherring_qrcvPF'
-    bs_key = 'kroESL7374R2aJq4zhQs'
-    url = f'http://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
+    #bs_user = 'craigherring_qrcvPF'
+    #bs_key = 'kroESL7374R2aJq4zhQs'
+    #url = f'http://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
 
-    options = Options()
-    bstack_options = {
-    "os": "Windows",
-    'browserName': 'edge',
-    'sessionName': scenario_name,
-     }
-    options.set_capability('bstack:options', bstack_options)
-    context.driver = webdriver.Remote(command_executor=url, options=options)
+    #options = Options()
+    #bstack_options = {
+    #"os": "Windows",
+    #'browserName': 'edge',
+    #'sessionName': scenario_name,
+    # }
+    #options.set_capability('bstack:options', bstack_options)
+    #context.driver = webdriver.Remote(command_executor=url, options=options)
 
     context.driver.maximize_window()
     context.driver.implicitly_wait(4)
