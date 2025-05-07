@@ -23,12 +23,12 @@ def username_entry(context):
 @When ("Type password")
 def password_entry(context):
     context.driver.find_element(By.NAME, 'Password').send_keys('1234')
-#    sleep(3)
+    sleep(3)
 
 @When ("Log in to the page")
 def log_in(context):
     context.app.reelly_main_page.log_in()
-    sleep(1)
+    sleep(3)
 
 @When ("Click on 'market' on the left side menu")
 def open_market(context):

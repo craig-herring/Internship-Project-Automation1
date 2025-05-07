@@ -13,10 +13,21 @@ def browser_init(context, scenario_name):
     """
 
 
-    driver_path = ChromeDriverManager().install()
-    service = Service(driver_path)
-    context.driver = webdriver.Chrome(service=service)
+    #driver_path = ChromeDriverManager().install()
+    #service = Service(driver_path)
+    #context.driver = webdriver.Chrome(service=service)
 
+    ### Chrome ###
+    # driver_path = ChromeDriverManager().install()
+    # service = Service(driver_path)
+    # context.driver = webdriver.Chrome(service=service)
+
+    ###Mobile Emulator###
+    mobile_emulation = {"deviceName": "iPhone SE"}
+    chrome_options = webdriver.ChromeOptions()
+    chrome_options.add_experimental_option("mobileEmulation", mobile_emulation)
+    context.driver = webdriver.Chrome(options=chrome_options)
+    ###
 
     #driver_path = GeckoDriverManager().install()
     #service = Service(driver_path)
